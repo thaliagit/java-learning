@@ -27,26 +27,27 @@ public class HashMapObjectsPracticeUpdateThroughHashMapLooping {
         products.put(205, new Product("Keyboard", 75));
         products.put(317, new Product("Headphones", 120));
         products.put(450, new Product("Mouse", 35));
+        products.put(520, new Product("Monitor", 300));
 
        //products.get(205).price = 100;
        //products.get(317).price = 150;
        //products.get(101).price = 1700;
 
-       products.get(205).setPrice(100);
-       products.get(317).setPrice(150);
-       products.get(101).setPrice(1700);
+       //products.get(205).setPrice(100);
+       //products.get(317).setPrice(150);
+       //products.get(101).setPrice(1700);
 
        boolean exists450 = products.containsKey(450);
        if(exists450){
-        products.get(450).setPrice(50);
+        //products.get(450).setPrice(50);
        }else{
         System.out.println("Product not found.");
        }
 
 
        for(HashMap.Entry<Integer,Product> entry : products.entrySet()){
-        System.out.print("ID: " + entry.getKey() + " | ");
-        entry.getValue().showInfo();
+        System.out.println("Product name: " + entry.getValue().name);
+        //entry.getValue().showInfo();
        }
     }
 }
