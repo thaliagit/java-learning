@@ -1,6 +1,6 @@
 package inheritance;
 
-public class InheritancePractice {
+public class InheritanceOverride {
     public static class Animal {
         String name;
 
@@ -23,9 +23,9 @@ public class InheritancePractice {
         void bark() {
             System.out.println("Dog is barking.");
         }
-
-        void makeAnimalEat() {
-            super.eats();
+        @Override 
+        void eats(){
+            System.out.println("Dog is eating.");
         }
 
         void showName() {
@@ -35,7 +35,7 @@ public class InheritancePractice {
 
     public static void main(String[] args) {
         Dog dog = new Dog("Buddy");
-        dog.makeAnimalEat();
         dog.showName();
+        dog.eats();
     }
 }
